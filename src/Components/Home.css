@@ -1,0 +1,38 @@
+.io {
+    background: #04062c;
+    height: 100vh;
+}
+.eventimgContainer {
+    width: 50%;
+
+}
+
+.uyu {
+    width: 50%;
+    
+}
+.uyu p {
+    line-height: 5rem;
+}
+.uyu button {
+   
+}
+.register {
+    border-radius: 5px;
+    background: #3d41ee;
+
+}
+@media only screen and (max-width: 640px) {
+ .eventimg {
+    
+ }
+ .eventimgContainer{
+    width: 100%;
+
+ }
+ .uyu{
+    width: 100%;
+
+ }
+
+}

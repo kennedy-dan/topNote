@@ -1,0 +1,69 @@
+.blue-section {
+    background: #3d41ee;
+    width: 30%;
+    height: 100vh;
+    opacity: 0.6;
+}
+.event-icon {
+    color: #ffff;
+}
+
+.register-section {
+    width: 60%;
+    /* height: 100vh; */
+
+}
+.uiui p {
+    color: #04062c;
+}
+.uiui {
+    /* align-content: center; */
+
+    position: absolute;
+    top: 5%;
+}
+.name-input {
+}
+.name-input input, select{
+    outline: none;
+    /* background: #E6E6E6; */
+    border-radius: 5px;
+    padding-left: 13px;
+    padding-bottom: 7px;
+    /* width:200px; */
+    border: 1px solid #3d41ee;
+  
+}
+.uiui button {
+    border-radius: 5px;
+    background: #3d41ee;
+    outline: none;
+}
+.picer {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 770px) {
+    .blue-section{
+        /* width: 250px; */
+        border-radius: 50%;
+        width: 100%;
+        height: 50vh;
+        content: "-";
+      position: relative;
+      top: -10%;
+      left: 48%;
+      overflow: hidden;
+
+        /* bottom: 30%; */
+        /* position: absolute; */
+    }
+    .blue-section img {
+        /* width: 100px; */
+        height: 20vh;
+    }
+    .register-section {
+         top: 30%;
+        position: absolute;
+    }
+}
