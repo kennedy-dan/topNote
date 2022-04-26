@@ -13,7 +13,7 @@
     /* height: 100vh; */
 
 }
-.uiui p {
+.form-section p {
     color: #04062c;
 }
 .uiui {
@@ -26,7 +26,7 @@
 }
 .name-input input, select{
     outline: none;
-    /* background: #E6E6E6; */
+    background: #E6E6E6;
     border-radius: 5px;
     padding-left: 13px;
     padding-bottom: 7px;
@@ -34,13 +34,19 @@
     border: 1px solid #3d41ee;
   
 }
-.uiui button {
+.form-section button {
     border-radius: 5px;
     background: #3d41ee;
     outline: none;
 }
-.picer {
-    padding: 10px;
+.date {
+    outline: none;
+    background: #E6E6E6;
+    border-radius: 5px;
+    padding-left: 13px;
+    padding-bottom: 7px;
+    /* width:200px; */
+    border: 1px solid #3d41ee
 }
 
 @media only screen and (max-width: 770px) {
@@ -60,10 +66,10 @@
     }
     .blue-section img {
         /* width: 100px; */
-        height: 20vh;
+        height: 90px;
     }
     .register-section {
-         top: 30%;
+         top: 10%;
         position: absolute;
     }
 }

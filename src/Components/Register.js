@@ -22,7 +22,7 @@ const Register = () => {
   const [phoneHelper, setphoneHelper] = useState("");
   const [phoneError, setPhoneError] = useState(false);
 
-  const [dob, onChange] = useState("");
+  const [dob, setDob] = useState("");
   const [dobError, onChangeError] = useState(false);
 
   const [gender, setGender] = useState("");
@@ -105,7 +105,9 @@ const Register = () => {
       email === "" ||
       phone === "" ||
       dob === "" ||
-      emailHelper === "Invalid email"
+      gender === "" ||
+      emailHelper === "Invalid email" ||
+      phoneHelper === "Invalid phone"
     ) {
       setopenModal(false);
     } else {
@@ -161,21 +163,21 @@ const Register = () => {
   return (
     <div className="md:flex overflow-hidden">
       <div className="blue-section overflow-hidden">
-        <div className=" pt-14 md:pt-0 justify-between md:block ml-10 overflow-hidden">
-          <div className="flex md:pt-5 overflow-hidden">
+        <div className=" pt-20 md:pt-0 justify-between md:block ml-10 overflow-hidden">
+          <div className="flex ml-1 sm:ml-20 md:ml-0 md:pt-5">
             <CalendarIcon className="h-5 w-5 mr-2 event-icon" />
-            <p className="text-white"> Book your Event</p>
+            <p className="text-white text-sm md:text-base"> Book your Event</p>
           </div>
-          <div className="hidden sm:hidden md:flex">
-          <p className="text-white  md:mt-20 text-lg md:text-4xl">
-            A few clicks from booking your event
-          </p>
+          <div className="hidden sm:flex md:flex">
+            <p className="text-white ml-10 sm:ml-15 md:ml-0  md:mt-20 text-sm md:text-3xl lg:text-4xl">
+              A few clicks from booking your event
+            </p>
           </div>
-          <img className="mt-5 md:mt-20" src={schedule} alt="schedule-img" />
+          <img className="mt-5 md:mt-20 ml-10 sm:ml-20 md:ml-0" src={schedule} alt="schedule-img" />
         </div>
       </div>
       <div className="register-section ">
-        <div className=" ml-10 uiui ">
+        <div className=" ml-10 form-section">
           <p className="mb-10 text-xl font-bold">Register</p>
           <p className="font-medium text-lg mb-5">
             Book your events efficiently
@@ -190,10 +192,10 @@ const Register = () => {
                 value={firstName}
                 id="firstname"
                 onChange={(e) => setFirstName(e.target.value)}
-                className="w-64 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
+                className="w-64 sm:w-80 p-2 md:w-56 lg:w-72 xl:w-96 "
               />
               {firstNameError ? (
-                <p className="text-red-500">first name is required *</p>
+                <h6 className="text-red-500">first name is required *</h6>
               ) : (
                 ""
               )}
@@ -203,10 +205,10 @@ const Register = () => {
               <input
                 value={lastName}
                 onChange={(e) => setLasttName(e.target.value)}
-                className="w-64 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
+                className="w-64 p-2 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
               />
               {lastNameError ? (
-                <p className="text-red-500">last name is required *</p>
+                <h6 className="text-red-500">last name is required *</h6>
               ) : (
                 ""
               )}
@@ -219,10 +221,10 @@ const Register = () => {
                 value={email}
                 id={"email"}
                 onChange={handleOnChange}
-                className="w-64 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
+                className="w-64 p-2 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
               />
               {emailError ? (
-                <p className="text-red-500">Email is required *</p>
+                <h6 className="text-red-500">Email is required *</h6>
               ) : (
                 ""
               )}
@@ -230,9 +232,14 @@ const Register = () => {
             </div>
             <div className="md:ml-10">
               <p className="mb-2">Phone Number</p>
-              <input value={phone} id="phone" onChange={handleOnChange} className= 'w-64 sm:w-80 md:w-56 lg:w-72 xl:w-96 '/>
+              <input
+                value={phone}
+                id="phone"
+                onChange={handleOnChange}
+                className="w-64 p-2 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
+              />
               {phoneError ? (
-                <p className="text-red-500">phone number is required *</p>
+                <h6 className="text-red-500">phone number is required *</h6>
               ) : (
                 ""
               )}
@@ -243,16 +250,15 @@ const Register = () => {
             <div className="mb-6 md:mb-0">
               <p className="mb-2">Date of Birth</p>
               <div>
-                <DatePicker
-                  onChange={onChange}
-                  
+                <input
+                  onChange={(e) => setDob(e.target.value)}
+                  type="date"
                   value={dob}
-                  format={"dd-MM-y"}
-                  className= 'w-64 sm:w-80 md:w-56 lg:w-72 xl:w-96 '
+                  className="w-64 p-2 sm:w-80 md:w-56 lg:w-72 xl:w-96 date"
                 />
-                <p>dd/mm/yy</p>
+
                 {dobError ? (
-                  <p className="text-red-500">date of birth is required *</p>
+                  <h6 className="text-red-500">date of birth is required *</h6>
                 ) : (
                   ""
                 )}
@@ -263,14 +269,15 @@ const Register = () => {
               <select
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
-                className= 'w-64 sm:w-80 md:w-56 lg:w-72 xl:w-96 '
+                className="w-64 p-2 sm:w-80 md:w-56 lg:w-72 xl:w-96 "
               >
+                <option></option>
                 <option value={"Male"}>Male</option>
                 <option value={"female"}>Female</option>
                 <option value={"others"}>Others</option>
               </select>
               {genderError ? (
-                <p className="text-red-500">gender is required *</p>
+                <h6 className="text-red-500">gender is required *</h6>
               ) : (
                 ""
               )}
@@ -278,7 +285,7 @@ const Register = () => {
           </div>
           <button
             onClick={submitEvent}
-            className="inline-block text-sm px-10 py-3 leading-none border mt-10  text-white "
+            className="inline-block mb-20 md:mb-0 text-sm px-10 py-3 leading-none border mt-10  text-white "
           >
             Book Event
           </button>
