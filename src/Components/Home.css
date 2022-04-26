@@ -1,40 +1,31 @@
-.io {
+.home-container {
     background: #04062c;
     height: 100vh;
 }
 .eventimgContainer {
     width: 50%;
-
 }
 
-.uyu {
+.home-text {
     width: 50%;
-    
 }
-.uyu p {
+.home-text p {
     line-height: 5rem;
-}
-.uyu button {
-   
 }
 .register {
     border-radius: 5px;
     background: #3d41ee;
-
 }
 @media only screen and (max-width: 640px) {
- .eventimg {
-    
- }
+
  .eventimgContainer{
     width: 100%;
 
  }
- .uyu{
+ .home-text{
     width: 100%;
-
  }
- .uyu p{
+ .home-text p{
      line-height: 3rem;
      font-size: 40px;
  }
