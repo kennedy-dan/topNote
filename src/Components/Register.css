@@ -10,19 +10,9 @@
 
 .register-section {
     width: 60%;
-    /* height: 100vh; */
-
 }
 .form-section p {
     color: #04062c;
-}
-.uiui {
-    /* align-content: center; */
-
-    position: absolute;
-    top: 5%;
-}
-.name-input {
 }
 .name-input input, select{
     outline: none;
@@ -45,7 +35,6 @@
     border-radius: 5px;
     padding-left: 13px;
     padding-bottom: 7px;
-    /* width:200px; */
     border: 1px solid #3d41ee
 }
 
