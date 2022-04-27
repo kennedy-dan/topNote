@@ -222,7 +222,7 @@ const Register = () => {
               ) : (
                 ""
               )}
-              <p>{emailHelper}</p>
+              <h6 className="text-red-500">{emailHelper}</h6>
             </div>
             <div className="md:ml-10">
               <p className="mb-2">Phone Number</p>
