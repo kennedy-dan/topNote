@@ -237,7 +237,7 @@ const Register = () => {
               ) : (
                 ""
               )}
-              <p>{phoneHelper}</p>
+              <h6 className="text-red-500">{phoneHelper}</h6>
             </div>
           </div>
           <div className="md:flex mt-6 md:mt-10 n justify-between">
